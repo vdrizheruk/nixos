@@ -15,3 +15,9 @@ sudo nix-channel --update
 ```bash
 sudo nixos-rebuild switch
 ```
+
+## How to cleanup system
+
+```bash
+sudo nix-collect-garbage -d
+```
