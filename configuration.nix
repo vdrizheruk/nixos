@@ -50,11 +50,14 @@ in
   services.xserver.autorun = true;
   services.xserver.layout = "us";
   services.xserver.desktopManager.xterm.enable = false;
-  services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.windowManager.i3.enable = true;
-  services.xserver.displayManager.defaultSession = "none+i3";
+  #services.xserver.displayManager.lightdm.enable = true;
+  #services.xserver.windowManager.i3.enable = true;
+  #services.xserver.displayManager.defaultSession = "none+i3";
   # Enable touchpad support (enabled default in most desktopManager).
   #services.xserver.libinput.enable = true;
+  
+  services.xserver.desktopManager.xfce.enable = true;
+  services.xserver.displayManager.defaultSession = "xfce";
 
   # Configure keymap in X11
   # services.xserver.layout = "us";
@@ -87,6 +90,7 @@ in
     php73Packages.composer 
     nodejs-14_x
     fpm
+    mysql
   ];
   
   nixpkgs.config.allowUnfree = true;
