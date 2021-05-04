@@ -45,23 +45,27 @@ in
     keyMap = "us";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-  services.xserver.autorun = true;
-  services.xserver.layout = "us";
-  services.xserver.desktopManager.xterm.enable = false;
-  #services.xserver.displayManager.lightdm.enable = true;
-  #services.xserver.windowManager.i3.enable = true;
-  #services.xserver.displayManager.defaultSession = "none+i3";
-  # Enable touchpad support (enabled default in most desktopManager).
-  #services.xserver.libinput.enable = true;
+  services.xrdp = {
+    enable = true;
+    #defaultWindowManager = "startplasma-x11";
+    defaultWindowManager = "xfce";
+  };
   
-  services.xserver.desktopManager.xfce.enable = true;
-  services.xserver.displayManager.defaultSession = "xfce";
+  # Enable the X11 windowing system.
+  services.xserver = {
+    enable = true;
+    autorun = true;
+    desktopManager.xterm.enable = false;
+    desktopManager.xfce.enable = true;
+    displayManager.defaultSession = "xfce";
+    #displayManager.sddm.enable = true;
+    #desktopManager.plasma5.enable = true;
+    layout = "us,ru(winkeys)";
+    xkbOptions = "grp:alt_shift_toggle";
+    xkbVariant  = "winkeys";
+    enableCtrlAltBackspace = true;
+  };
 
-  # Configure keymap in X11
-  # services.xserver.layout = "us";
-  # services.xserver.xkbOptions = "eurosign:e";
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
