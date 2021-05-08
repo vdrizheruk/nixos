@@ -3,11 +3,11 @@
   console = {
     font = "ter-v14n";
     packages = [ pkgs.terminus_font ];
-    keyMap = "ru";
+    keyMap = "us";
   };
 
   i18n = {
-    defaultLocale = "ru_RU.UTF-8";
+    defaultLocale = "en_US.UTF-8";
   };
 
   services.ntp = {

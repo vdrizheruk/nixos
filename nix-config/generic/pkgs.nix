@@ -27,5 +27,9 @@
     ccze lnav multitail
     fio inxi spectre-meltdown-checker
     lego mariadb.client
+    wget vim git mc curl lynx wget htop glances zsh
+    lxappearance
+    docker-compose
+    ansible_2_10 ansible-lint
   ];
 }

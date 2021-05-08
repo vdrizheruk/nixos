@@ -40,6 +40,8 @@ with lib;
     firewall.enable = false;
     useHostResolvConf = false;
     usePredictableInterfaceNames = false;
+    useDHCP = false;
+    interfaces.ens18.useDHCP = true;
   };
 
   nix = mkDefault {
@@ -65,7 +67,7 @@ with lib;
     enable = true;
   };
 
-  users = mkDefault {
-    mutableUsers = false;
-  };
+#  users = mkDefault {
+#    mutableUsers = false;
+#  };
 }

@@ -7,8 +7,15 @@
   ];
 
   boot = {
-    loader.grub.device = "/dev/vda";
+    loader.grub.enable = true;
+    loader.grub.version = 2;
+    loader.grub.device = "/dev/sda";
   };
 
-  networking.hostName = "NixOS-example";
+  networking.hostName = "nixos";
+
+  # Set your time zone.
+  time.timeZone = "UTC";
+
+
 }
