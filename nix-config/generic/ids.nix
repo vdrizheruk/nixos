@@ -8,7 +8,7 @@
 
   config = {
     uid-gid = {
-      rebrain   = 51011;
+      developer   = 51011;
 
       web-nginx = 21010;
       web-httpd = 21020;
