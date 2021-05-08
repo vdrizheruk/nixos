@@ -9,7 +9,7 @@
     nano perl rsync strace
     binutils file lsof sysstat
     dcfldd gpart parted
-    dar duf htop mc tree
+    dar htop mc tree
     git gitAndTools.tig
     tcpdump wget
   ];
