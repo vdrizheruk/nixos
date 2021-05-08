@@ -11,7 +11,7 @@
   };
 
   services.ntp = {
-    enable = true;
+    enable = false;
   };
 
   services.chrony = {
