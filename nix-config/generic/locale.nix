@@ -11,7 +11,7 @@
   };
 
   services.ntp = {
-    enable = false;
+    enable = true;
   };
 
   services.chrony = {
@@ -30,7 +30,7 @@
   };
 
   time = {
-    timeZone = "Europe/Moscow";
+    timeZone = "UTC";
     hardwareClockInLocalTime = false;
   };
 }

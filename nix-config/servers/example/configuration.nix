@@ -13,9 +13,4 @@
   };
 
   networking.hostName = "nixos";
-
-  # Set your time zone.
-  time.timeZone = "UTC";
-
-
 }
