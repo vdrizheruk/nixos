@@ -5,6 +5,15 @@
     allowUnfree = true;
   };
 
+  environment.etc = with pkgs; {
+    "php73".source = php73;
+    "php74".source = php74;
+    "php80".source = unstable.php80;
+    "php72".source = legacy.php72;
+  };
+
+  virtualisation.docker.enable = true;
+
   environment.defaultPackages = with pkgs; [
     nano perl rsync strace
     binutils file lsof sysstat
@@ -31,5 +40,7 @@
     lxappearance
     docker-compose
     ansible_2_10 ansible-lint
+    nodejs-14_x fpm mysql
+    legacy.php72 php73 php74 unstable.php80
   ];
 }
