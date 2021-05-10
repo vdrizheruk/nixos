@@ -9,7 +9,7 @@
     permitRootLogin = mkDefault "yes";
     passwordAuthentication = false;
     challengeResponseAuthentication = false;
-    useDns = false;
+    useDns = true;
     logLevel = mkDefault "INFO";
 
     macs = [ "hmac-sha2-512-etm@openssh.com" ];
@@ -25,7 +25,7 @@
     ];
 
     extraConfig = ''
-      AllowGroups ssh-users
+      AllowGroups ssh-users root
 
       ListenAddress 0.0.0.0
       ClientAliveCountMax 10
@@ -42,8 +42,8 @@
       Banner none
       PrintLastLog yes
 
-      AllowAgentForwarding no
-      AllowTcpForwarding no
+      AllowAgentForwarding yes
+      AllowTcpForwarding yes
       FingerprintHash sha256
       GSSAPIAuthentication no
       HostbasedAuthentication no
@@ -52,9 +52,9 @@
       PermitEmptyPasswords no
       PermitTTY yes
       PermitTunnel no
-      PermitUserEnvironment no
+      PermitUserEnvironment yes
       PubkeyAuthentication yes
-      StrictModes yes
+      StrictModes no
 
       SyslogFacility AUTHPRIV
     '';

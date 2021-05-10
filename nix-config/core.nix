@@ -41,7 +41,6 @@ with lib;
     useHostResolvConf = false;
     usePredictableInterfaceNames = false;
     useDHCP = true;
-#    interfaces.ens18.useDHCP = true;
   };
 
   nix = mkDefault {

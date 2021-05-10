@@ -3,7 +3,7 @@
     ./../../core.nix
     ./services/fail2ban.nix
     ./services/firefall-nft.nix
-    ./users.nix
+#    ./users.nix
   ];
 
   boot = {
