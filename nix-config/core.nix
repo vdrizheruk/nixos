@@ -40,8 +40,8 @@ with lib;
     firewall.enable = false;
     useHostResolvConf = false;
     usePredictableInterfaceNames = false;
-    useDHCP = false;
-    interfaces.ens18.useDHCP = true;
+    useDHCP = true;
+#    interfaces.ens18.useDHCP = true;
   };
 
   nix = mkDefault {
