@@ -15,6 +15,9 @@
     swb  = "sudo nixos-rebuild boot --show-trace";
     swbu = "sudo nixos-rebuild boot --show-trace --upgrade";
     php = "/etc/php74/bin/php";
+    php74 = "/etc/php74/bin/php";
+    php73 = "/etc/php73/bin/php";
+    php72 = "/etc/php72/bin/php";
   };
 
   programs.nano = {
