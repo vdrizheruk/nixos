@@ -4,7 +4,7 @@ let
   legacy = import <nixos-legacy> {};
 
   php72 = pkgs.php72.buildEnv { extraConfig = "memory_limit = 4G"; };
-  php73 = pkgs.php74.buildEnv { extraConfig = "memory_limit = 4G"; };
+  php73 = pkgs.php73.buildEnv { extraConfig = "memory_limit = 4G"; };
   php74 = pkgs.php74.buildEnv { extraConfig = "memory_limit = 4G"; };
 #  unstable.php80 = pkgs.unstable.php80.buildEnv { extraConfig = "memory_limit = 4G"; };
 in
