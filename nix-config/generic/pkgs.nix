@@ -2,6 +2,7 @@
 let
   unstable = import <nixos-unstable> {};
   legacy = import <nixos-legacy> {};
+  php74 = pkgs.php74.buildEnv { extraConfig = "memory_limit = 2G"; };
 in
 {
   nixpkgs.config = {
