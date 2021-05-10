@@ -1,11 +1,6 @@
 {
   programs.ssh = {
     startAgent = true;
-    pubkeyAcceptedKeyTypes = [ "ssh-ed25519" ];
-    hostKeyAlgorithms = [ "ssh-ed25519" "rsa-sha2-512" ];
-    kexAlgorithms = [ "curve25519-sha256@libssh.org" ];
-    ciphers = [ "chacha20-poly1305@openssh.com" ];
-    macs = [ "hmac-sha2-512-etm@openssh.com" ];
     extraConfig = ''
       AddressFamily inet
       ConnectTimeout 60
@@ -27,15 +22,15 @@
       BatchMode no
       CheckHostIP yes
       ControlMaster no
-      ForwardAgent no
-      ForwardX11 no
-      ForwardX11Trusted no
+      ForwardAgent yes
+      ForwardX11 yes
+      ForwardX11Trusted yes
       HashKnownHosts no
       StrictHostKeyChecking ask
-      UpdateHostKeys no
+      UpdateHostKeys yes
 
-      IdentitiesOnly yes
-      IdentityFile ~/.ssh/id_ed25519
+#      IdentitiesOnly yes
+#      IdentityFile ~/.ssh/id_ed25519
       UserKnownHostsFile ~/.ssh/known_hosts
       GlobalKnownHostsFile /etc/ssh/ssh_known_hosts
     '';

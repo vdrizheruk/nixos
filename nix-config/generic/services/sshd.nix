@@ -16,9 +16,9 @@
     ciphers = [ "chacha20-poly1305@openssh.com" ];
     kexAlgorithms = [ "curve25519-sha256@libssh.org" ];
 
-    authorizedKeysFiles = mkForce [
-      "/etc/ssh/authorized_keys.d/%u"
-    ];
+#    authorizedKeysFiles = mkForce [
+#      "/etc/ssh/authorized_keys.d/%u"
+#    ];
 
     hostKeys = [
       { path = "/etc/ssh/ssh_host_ed25519_key"; type = "ed25519"; rounds = 128; }
