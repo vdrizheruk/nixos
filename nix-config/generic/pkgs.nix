@@ -3,9 +3,9 @@ let
   unstable = import <nixos-unstable> {};
   legacy = import <nixos-legacy> {};
 
-  php72 = pkgs.legacy.php72.buildEnv { extraConfig = "memory_limit = 4G"; };
-  php73 = pkgs.php73.buildEnv { extraConfig = "memory_limit = 4G"; };
-  php74 = pkgs.php74.buildEnv { extraConfig = "memory_limit = 4G"; };
+  php72 = pkgs.legacy.php72.buildEnv { extensions = { all, ... }: with all; [ imagick opcache ]; extraConfig = "memory_limit = 2048M"; };
+  php73 = pkgs.php73.buildEnv { extensions = { all, ... }: with all; [ imagick opcache ]; extraConfig = "memory_limit = 2048M"; };
+  php74 = pkgs.php74.buildEnv { extensions = { all, ... }: with all; [ imagick opcache ]; extraConfig = "memory_limit = 2048M"; };
 #  unstable.php80 = pkgs.unstable.php80.buildEnv { extraConfig = "memory_limit = 4G"; };
 in
 {
@@ -51,6 +51,6 @@ in
     docker-compose
     ansible_2_10 ansible-lint
     nodejs-14_x fpm mysql
-    php72 php73 php74 unstable.php80
+    legacy.php72 php73 php74 unstable.php80
   ];
 }
