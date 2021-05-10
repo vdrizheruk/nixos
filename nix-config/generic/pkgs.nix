@@ -1,4 +1,8 @@
 { config, pkgs, ... }:
+let
+  unstable = import <nixos-unstable> {};
+  legacy = import <nixos-legacy> {};
+in
 {
   nixpkgs.config = {
     allowBroken = true;
