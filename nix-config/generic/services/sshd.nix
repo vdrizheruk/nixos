@@ -25,7 +25,7 @@
     ];
 
     extraConfig = ''
-      AllowGroups ssh-users root
+      AllowGroups ssh-users root users
 
       ListenAddress 0.0.0.0
       ClientAliveCountMax 10
