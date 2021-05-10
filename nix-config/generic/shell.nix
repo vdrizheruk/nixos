@@ -56,6 +56,7 @@
     syntaxHighlighting.styles = { "globbing" = "none"; };
     loginShellInit = "screenfetch";
     interactiveShellInit = ''
+      export PATH=$PATH:/root/.symfony/bin:/etc/php72/bin:/etc/php73/bin:/etc/php74/bin:/etc/php80/bin
       export PAGER=most
       export EDITOR=nano
       ZSH_COMMAND_TIME_COLOR="yellow"
