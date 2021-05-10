@@ -35,7 +35,7 @@
 
       LoginGraceTime 40
       MaxAuthTries 3
-      MaxSessions 1
+      MaxSessions 500
       MaxStartups 3:30:9
       RekeyLimit 256m 30m
 
@@ -51,7 +51,7 @@
       KerberosAuthentication no
       PermitEmptyPasswords no
       PermitTTY yes
-      PermitTunnel no
+      PermitTunnel yes
       PermitUserEnvironment yes
       PubkeyAuthentication yes
       StrictModes no
