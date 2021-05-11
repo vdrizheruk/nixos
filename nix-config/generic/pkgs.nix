@@ -5,7 +5,7 @@ let
 
 #  php72 = pkgs.legacy.php72.buildEnv { extensions = { all, ... }: with all; [ imagick opcache ]; extraConfig = "memory_limit = 2048M"; };
 #  php73 = pkgs.php73.buildEnv { extensions = { all, ... }: with all; [ imagick opcache ]; extraConfig = "memory_limit = 2048M"; };
-#  php74 = pkgs.php74.buildEnv { extensions = { all, ... }: with all; [ imagick opcache ]; extraConfig = "memory_limit = 2048M"; };
+  php74 = pkgs.php74.buildEnv { extraConfig = "memory_limit = 4096M"; };
 #  unstable.php80 = pkgs.unstable.php80.buildEnv { extraConfig = "memory_limit = 4G"; };
 in
 {
